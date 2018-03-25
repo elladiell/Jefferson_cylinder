@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Cylindr:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Cylindr_jar</output-path>
+    <root id="archive" name="Cylindr.jar">
+      <element id="module-output" name="Cylindr" />
+    </root>
+  </artifact>
+</component>

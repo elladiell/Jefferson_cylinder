@@ -1,0 +1,26 @@
+package com.company;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
+public class Main {
+    private static int discsCount = 36;
+    private static final int ALPHABET_LENGTH = 256; // ASCII codes 32- 126
+    private static String fileEncoding = "Cp1251";
+
+
+    public static String[] generateCylinder(Random random) throws UnsupportedEncodingException {
+        String[] discs = new String[discsCount];
+        byte[] alphabet = new byte[ALPHABET_LENGTH];
+        for (int i = 0; i < alphabet.length; i++) {
+            alphabet[i] = (byte) (0 + i);// ' ' = 32 sdf �
+        }
+
+        for (int i = 0; i < discs.length; i++) {
+            shuffleArray(alphabet, random);
+            discs[i] = new String(alphabet, fileEncoding);
+        }
+        return discs;
+    }
